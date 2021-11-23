@@ -11,8 +11,14 @@ public class Alumno {
      * Crea un alumno nuevo
      */
     public Alumno(String nombreCompleto, String numeroMatriculaAlumno, int edadAlumno) {
-        nombre = nombreCompleto;
+        nombre = nombreCompleto; 
+        if (nombre.length() < 3) {
+            System.out.println("La longitud del nombre es inferior a 3 caracteres.");
+        }
         numeroMatricula = numeroMatriculaAlumno;
+        if (numeroMatricula.length() < 4) {
+            System.out.println("La longitud de la matrícula es inferior a 4 caracteres.");
+        }
         edad = edadAlumno;
     }
 
@@ -41,7 +47,7 @@ public class Alumno {
      * Devuelve el nombre de usuario que el alumno debe configurar
      * en su cuenta de Github en formato de 7 caracateres
      */
-    public String getNombreUsuarioGithub() {
+    public String getNombreUsuarioGithub() {        
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     }
 }
