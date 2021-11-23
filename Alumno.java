@@ -50,16 +50,10 @@ public class Alumno {
     public String getNombreUsuarioGithub() {
         String nombreAUsar = nombre;
         String numeroAUsar = numeroMatricula;
-        if (nombre.length() < 3) {
-            nombreAUsar = nombre;
-        }            
-        else {
+        if (nombre.length() > 3) {
             nombreAUsar = nombre.substring(0, 3);
         }
-        if (numeroMatricula.length() < 4) {
-            numeroAUsar = numeroMatricula;
-        }
-        else {
+        if (numeroMatricula.length() > 4) {
             numeroAUsar = numeroMatricula.substring(0, 4);
         }
         return nombreAUsar + numeroAUsar;
